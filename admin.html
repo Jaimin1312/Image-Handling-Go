@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      * {
+          margin: 0px;
+          padding: 0px;
+      }
+  </style>
+</head>
+<body>
+
+  
+<div class="container-fluid">
+        <div class="row">
+            <table class="table table-hover">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Image</th>
+                        
+                        <th>Author</th>
+                        <th>Price</th>
+                        <th>Isbn</th>
+                        <th>Language</th>
+                        <th>Description</th>
+                    </tr>
+                    {{range  .}}
+                    <tr>
+                        <td>{{.Id}}</td>
+                        <td>{{.Name}}</td>
+                        <td> <img src="data:image/jpeg;base64,{{.Image}}"/></td>
+                        <td>{{.Author}}</td>
+                        <td>{{.Price}}</td>
+                        <td>{{.Isbn}}</td>
+                        <td>{{.Language}}</td>
+                        <td>{{.Description}}</td>
+                    </tr>
+                    {{end}}
+            </table>
+        </div>
+       
+</div>
+
+</body>
+</html>
